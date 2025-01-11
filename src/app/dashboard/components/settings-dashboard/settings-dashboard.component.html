@@ -1,0 +1,104 @@
+<div>
+    <div class="overflow-hidden bg-white">
+        <div class="flex gap-5 max-md:flex-col">
+            <div class="flex flex-col w-full max-md:max-w-full">
+                <header
+                    class="flex flex-wrap gap-5 justify-between items-start px-9 pt-5 pb-2.5 w-full bg-white max-md:px-5 max-md:max-w-full">
+                    <h1 class="mt-4 text-2xl font-semibold text-slate-700">Settings</h1>
+                    <div class="flex flex-wrap gap-8 items-center text-base whitespace-nowrap text-slate-400">
+                        <div
+                            class="flex gap-4 self-stretch px-6 py-4 my-auto shadow-lg bg-slate-100 rounded-[40px] max-md:px-5">
+                            <label for="searchInput" class="sr-only">Search</label>
+                            <img loading="lazy"
+                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/5baf6310b17e1bc637a0b7bfc76cb77b52028202bcb1527145e2e1dce8e36d17?placeholderIfAbsent=true&apiKey=5f61ef1379d444ecbaf0fd96d5078749"
+                                alt="" class="object-contain shrink-0 w-5 aspect-square" />
+                            <input type="search" id="searchInput" placeholder="Search.."
+                                class="bg-transparent border-none focus:outline-none" />
+                        </div>
+                        <button aria-label="Notifications" class="focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <img loading="lazy"
+                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/e27d69ad9a7b62bb1c430d4009c9b284cab7921044ddde2265ab1880cdb438c1?placeholderIfAbsent=true&apiKey=5f61ef1379d444ecbaf0fd96d5078749"
+                                alt="" class="object-contain shrink-0 self-stretch my-auto aspect-square w-[50px]" />
+                        </button>
+                        <button aria-label="Messages" class="focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <img loading="lazy"
+                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/7f8b3eb645e91ba350524a9d026b62db8171698f9ffb5869f1070f569307af1a?placeholderIfAbsent=true&apiKey=5f61ef1379d444ecbaf0fd96d5078749"
+                                alt="" class="object-contain shrink-0 self-stretch my-auto aspect-square w-[50px]" />
+                        </button>
+                        <button aria-label="Profile" class="focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <img loading="lazy"
+                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/e0548a329eb08d195aa93556ecd09bb437ff11c9f15e9eb045b9e1e137801414?placeholderIfAbsent=true&apiKey=5f61ef1379d444ecbaf0fd96d5078749"
+                                alt="" class="object-contain shrink-0 self-stretch aspect-square w-[60px]" />
+                        </button>
+                    </div>
+                </header>
+
+                <form class="flex flex-col items-start mt-4 ml-8 max-w-full w-[842px]">
+                    <h2 class="text-lg font-semibold text-slate-700">Account Settings</h2>
+                    <div class="flex flex-wrap gap-10 items-start self-stretch mt-8 max-md:max-w-full">
+                        <div class="flex flex-wrap gap-4 items-start min-w-[240px] w-[563px] max-md:max-w-full">
+                            <div class="flex grow shrink gap-4 items-start min-w-[240px] w-[533px] max-md:max-w-full">
+                                <div
+                                    class="flex flex-col flex-1 shrink justify-center w-full basis-0 min-h-[69px] min-w-[240px] max-md:max-w-full">
+                                    <label for="nameInput"
+                                        class="flex gap-2.5 justify-center items-center self-start text-base tracking-wide leading-7 whitespace-nowrap h-[21px] rounded-[100px] text-neutral-400">
+                                        <span class="self-stretch my-auto opacity-70">Name</span>
+                                    </label>
+                                    <input type="text" id="nameInput" name="name"
+                                        class="flex overflow-hidden flex-wrap flex-1 gap-2.5 items-center px-3.5 py-7 text-sm font-medium tracking-normal leading-snug rounded-lg bg-slate-100 size-full text-neutral-400 max-md:max-w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        value="Jackson D." />
+                                </div>
+                            </div>
+                            <div
+                                class="flex grow shrink gap-4 items-start whitespace-nowrap min-w-[240px] w-[533px] max-md:max-w-full">
+                                <div
+                                    class="flex flex-col flex-1 shrink justify-center w-full basis-0 min-h-[69px] min-w-[240px] max-md:max-w-full">
+                                    <label for="emailInput"
+                                        class="flex gap-2.5 justify-center items-center self-start text-base tracking-wide leading-7 h-[21px] rounded-[100px] text-neutral-400">
+                                        <span class="self-stretch my-auto opacity-70">Email</span>
+                                    </label>
+                                    <input type="email" id="emailInput" name="email"
+                                        class="flex overflow-hidden flex-wrap flex-1 gap-2.5 items-center px-3.5 py-7 text-sm font-medium tracking-normal leading-snug rounded-lg bg-slate-100 size-full text-neutral-400 max-md:max-w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        value="Jackson@gmail.com" />
+                                </div>
+                            </div>
+                            <button type="submit"
+                                class="flex grow shrink gap-2.5 items-end text-sm font-medium text-center text-white min-h-[74px] w-[121px] focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <span
+                                    class="gap-2.5 self-stretch pr-8 pl-8 bg-blue-600 rounded-3xl min-h-[47px] w-[151px] max-md:px-5 flex items-center justify-center">
+                                    Update Profile
+                                </span>
+                            </button>
+                        </div>
+                        <div class="flex flex-col items-start py-1 pr-9 w-[235px]">
+                            <label for="profilePicture" class="text-sm font-semibold text-zinc-800">
+                                Profile picture
+                            </label>
+                            <div
+                                class="flex overflow-hidden relative flex-col items-start px-2 pt-40 pb-2 mt-2.5 shadow-sm aspect-square rounded-[100px] w-[200px] max-md:pt-24 max-md:pr-5">
+                                <img loading="lazy"
+                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/b04bf05df805b8c71a34a8cd20defd92eae779b57cceec6c86a472b410fd083d?placeholderIfAbsent=true&apiKey=5f61ef1379d444ecbaf0fd96d5078749"
+                                    alt="Current profile picture" class="object-cover absolute inset-0 size-full" />
+                                <input type="file" id="profilePicture" accept="image/*"
+                                    class="relative shrink-0 bg-white rounded-md border border-gray-300 border-solid h-[31px] w-[63px]"
+                                    aria-label="Upload new profile picture" />
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="mt-12 text-lg font-semibold text-slate-700 max-md:mt-10">
+                        Social Account
+                    </h2>
+                    <div class="flex gap-4 mt-6 max-w-full text-xs font-medium text-center text-white w-[171px]">
+                        <img loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/fac4695edbca73a04797baec38008db3dace58f2a59bfd6930736b1e229ffccf?placeholderIfAbsent=true&apiKey=5f61ef1379d444ecbaf0fd96d5078749"
+                            alt="Social media icon" class="object-contain shrink-0 aspect-square w-[51px]" />
+                        <button type="button"
+                            class="gap-2 self-stretch pr-3.5 pl-3.5 my-auto bg-blue-600 rounded-2xl min-h-[33px] flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            Connect Account
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

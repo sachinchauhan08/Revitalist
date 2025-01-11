@@ -1,0 +1,73 @@
+<div class="grid grid-cols-12 min-h-screen bg-slate-900">
+    <!-- Sidebar -->
+    <div class="col-span-2">
+        <nav class="flex flex-col max-md:ml-0 max-md:w-full" role="navigation" aria-label="Main navigation">
+            <div class="flex flex-col grow font-semibold">
+                <div class="flex flex-col py-6 bg-slate-900">
+                    <!-- Profile Image -->
+                    <img loading="lazy"
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/0a39f0c38a7df43e5792955bcb6bc6f487e0a74eaf6c55b39f21215e4c862acb"
+                        alt="Profile"
+                        class="object-contain self-end aspect-square rounded-[100px_0px_0px_100px] w-[50px]" />
+                    <!-- Logo -->
+                    <img loading="lazy"
+                        src="../../../assets/logo/logo.png"
+                        alt="Company Logo" class="object-contain self-center max-w-full aspect-[4.95] w-[228px]" />
+                    <!-- Navigation Buttons -->
+                    <div class="flex flex-col mt-14 w-full text-sm leading-6 text-white max-md:mx-1.5 max-md:mt-10">
+                        <div *ngFor="let item of navigationItems" class="relative">
+                            <!-- Button with routerLink if no submenu -->
+                            <button *ngIf="!item.submenu" [routerLink]="item.link" routerLinkActive="bg-blue-600"
+                                class="flex gap-4 px-5 py-4 mt-2.5 items-center w-full rounded-3xl shadow-[0px_20px_60px_rgba(0,119,255,0.3)]">
+                                <img [src]="item.icon" alt="{{ item.label }}"
+                                    class="object-contain shrink-0 aspect-square w-[26px]" />
+                                <span>{{ item.label }}</span>
+                            </button>
+
+                            <!-- Button with submenu toggle -->
+                            <button *ngIf="item.submenu"
+                                class="flex gap-4 px-5 py-4 mt-2.5 items-center w-full rounded-3xl shadow-[0px_20px_60px_rgba(0,119,255,0.3)]">
+                                <img [src]="item.icon" alt="{{ item.label }}"
+                                    class="object-contain shrink-0 aspect-square w-[26px]" />
+                                <span>{{ item.label }}</span>
+
+                                <!-- More Icon (three dots) -->
+                                <button class="absolute right-4 p-2" (click)="item.isOpen = !item.isOpen"
+                                    aria-label="Toggle Submenu">
+                                    <img *ngIf="!item.isOpen" [src]="item.menuIcon" alt="Open Submenu"
+                                        class="object-contain w-[20px]" />
+                                    <img *ngIf="item.isOpen"
+                                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/5e207b9a108cc487cf6e894611a1abb475fcbe13bf619069a591fa6f4e34e3b6?placeholderIfAbsent=true&apiKey=5f61ef1379d444ecbaf0fd96d5078749"
+                                        alt="Close Submenu" class="object-contain w-[20px]" />
+                                </button>
+                            </button>
+
+                            <!-- Submenu (conditional on isOpen) -->
+                            <div *ngIf="item.submenu && item.isOpen" class="ml-8">
+                                <button *ngFor="let subItem of item.submenu" [routerLink]="subItem.link"
+                                    routerLinkActive="bg-blue-600"
+                                    class="flex gap-4 px-5 py-3 mt-2.5 items-center w-full rounded-3xl shadow-[0px_20px_60px_rgba(0,119,255,0.3)] text-sm">
+                                    <img [src]="subItem.icon" alt="{{ subItem.label }}"
+                                        class="object-contain w-[24px]" />
+                                    <span>{{ subItem.label }}</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-0 flex items-center ml-10 mt-[150px] w-full text-base text-zinc-200 max-md:mt-10">
+                    <div class="flex gap-4 items-center">
+                        <img loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/90fbc7193584070ca61e8974c82dcca028c7f15634a012e678dcc370b9107549?placeholderIfAbsent=true&apiKey=5f61ef1379d444ecbaf0fd96d5078749"
+                            alt="Profile picture of Jackson D." class="object-contain w-20 aspect-square" />
+                        <span>Jackson D.</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Main Content -->
+    <div class="col-span-10 bg-gray-100 p-4">
+        <router-outlet></router-outlet>
+    </div>
+</div>
